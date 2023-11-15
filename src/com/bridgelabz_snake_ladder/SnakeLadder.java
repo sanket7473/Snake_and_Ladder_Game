@@ -7,7 +7,7 @@ public class SnakeLadder {
     public static final int Is_Ladder = 0;
     public static final int Is_Snake = 1;
     public static final int NoPlay = 2;
-
+    public static final int winning_position = 100;
     public static void main(String[] args) {
         int position = 0;
 
@@ -15,8 +15,7 @@ public class SnakeLadder {
         System.out.println("Single Player start at 0 position ");  //UC1..single player with start 0
 
         int player1_position = 0; //starting position of player 1.
-        int player2_position = 0;
-        int winning_position = 100;
+
         int NumberofTimeDiceRoll=0;
         // UC4: While loop is used to repeat the player position till 100.
         while (player1_position != winning_position ) //UC5 : Ensure the player gets at exact 100
@@ -47,17 +46,13 @@ public class SnakeLadder {
             if (player1_position < 0) {
                 player1_position = 0;   //player position below zero then player restarts from zero only
             }
-            else if (player1_position == winning_position) //UC4:beyond winning position then player_position is assigned 100
-            {
-                player1_position = winning_position;
-            }
             System.out.println("Player1 rolled the dice : " + RollsDie + " and moved to position : " + player1_position);
-
         }
         //To print the number of times dice roll.
         System.out.println("Number of times the Dice roll to win the game " +NumberofTimeDiceRoll);
-
+        
     }
+
 }
 
 
